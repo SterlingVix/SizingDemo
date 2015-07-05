@@ -1,0 +1,106 @@
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 4.6px 0;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20.8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #f7c4cd;
+    border-radius: 25px;
+    border: 1px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1.5px 1.5px 1px #000000, 0px 0px 1.5px #0d0d0d;
+    border: 1.7px solid #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background: #ea70a1;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -5.6px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #f8c8d1;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 20.8px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #f7c4cd;
+    border-radius: 25px;
+    border: 1px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1.5px 1.5px 1px #000000, 0px 0px 1.5px #0d0d0d;
+    border: 1.7px solid #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background: #ea70a1;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 20.8px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #f6c0c9;
+    border: 1px solid #010101;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #f7c4cd;
+    border: 1px solid #010101;
+    border-radius: 50px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1.5px 1.5px 1px #000000, 0px 0px 1.5px #0d0d0d;
+    border: 1.7px solid #000000;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    background: #ea70a1;
+    cursor: pointer;
+    height: 20.8px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #f7c4cd;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #f8c8d1;
+}
+
+#slider-vertical[type=range] {
+    position: relative;
+    top: 470px;
+    width: 470px;
+    margin-left: 22px;
+    transform-origin: top left;
+    transform: rotate(270deg);
+}
