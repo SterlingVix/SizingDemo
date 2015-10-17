@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg2985" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="200" width="700" version="1.2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata id="metadata2987">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <flowRoot id="flowRoot2989" style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="40px" transform="translate(0,-852.35968)" font-style="normal" font-family="Sans" line-height="125%" fill="#000000"><flowRegion id="flowRegion2991"><rect id="rect2993" y="200" x="300" width="100" height="100"/></flowRegion><flowPara id="flowPara2995"/></flowRoot>
+ <flowRoot id="flowRoot2997" style="word-spacing:0px;letter-spacing:0px;" font-weight="normal" xml:space="preserve" font-size="40px" transform="translate(0,-852.35968)" font-style="normal" font-family="Sans" line-height="125%" fill="#000000"><flowRegion id="flowRegion2999"><rect id="rect3001" y="100" x="200" width="200" height="90"/></flowRegion><flowPara id="flowPara3003"/></flowRoot>
+ <g id="lockpadBase" transform="matrix(0.96774072,0,0,0.93995432,-75.959769,-8.480545)">
+  <rect id="rect3013" stroke-linejoin="miter" style="enable-background:accumulate;color:#000000;" stroke-dasharray="none" rx="4" ry="4" height="30" width="40" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" y="100" x="600" stroke-width="2" fill="#ea70a1"/>
+  <path id="path3015" opacity="0.95999995" style="color:#000000;enable-background:accumulate;" d="m600,100c0,2,1,4,4,5l-4,10h10l-4-10c3-1,4-3,4-5,0-10-10-10-10,0z" fill-rule="nonzero" fill="#FFF"/>
+ </g>
+ <path id="sliderButton" stroke-linejoin="miter" d="m300,90a4,10,0,0,1,-9,0,4,10,0,1,1,9,0z" fill-opacity="0.62025314" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.45406294" fill="#ea70a1"/>
+ <g id="sliderGuide" stroke-linejoin="miter" transform="matrix(1.0951019,0,0,1.0139898,44.235901,-48.592778)" stroke="#ea70a1" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="4" stroke-width="1.58067846" fill="none">
+  <path id="path3023" d="m200,100,200,0"/>
+  <path id="path3025" d="m200,100,0,8"/>
+  <path id="path3027" d="m400,100,0,8"/>
+ </g>
+ <g id="buttonPlus" stroke-linejoin="miter" transform="translate(81.321,-6.3212405)" stroke="#ea70a1" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="4" fill="none">
+  <path id="path3029" d="m400,100a10,10,0,0,1,-30,0,10,10,0,1,1,30,0z" stroke-width="2.64199972"/>
+  <path id="path3033" d="m400,100,20,0" stroke-width="3.00000024"/>
+  <path id="path3035" d="m400,90,0,20" stroke-width="3.00000024"/>
+ </g>
+ <g id="buttonMinus" stroke-linejoin="miter" transform="translate(61.618187,40.40198)" stroke="#ea70a1" stroke-linecap="butt" stroke-dasharray="none" stroke-miterlimit="4" fill="none">
+  <path id="path3037" d="m200,50a10,10,0,0,1,-30,0,10,10,0,1,1,30,0z" stroke-width="2.64211345"/>
+  <path id="path3039" d="m100,50,20,0" stroke-width="3"/>
+ </g>
+ <path id="lockpadOpen" stroke-linejoin="miter" d="m500,80,0-10c0-20,20-20,20,0" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="5" fill="none"/>
+ <path id="lockpadClosed" stroke-linejoin="miter" d="m500,90,0-10c0-20-20-20-20,0" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="5" fill="none"/>
+</svg>

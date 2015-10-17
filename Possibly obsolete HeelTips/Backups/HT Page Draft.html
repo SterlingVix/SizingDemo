@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	</head>
+
+<body>
+
+<!-- TEMP !!!!!!!!!!!!! -->
+<!-- TEMP !!!!!!!!!!!!! -->
+<!-- TEMP !!!!!!!!!!!!! -->
+
+
+<script type="text/javascript">
+
+// TEMP!!!!!!!!!!!!!!!!!!!!
+// TEMP!!!!!!!!!!!!!!!!!!!!
+// TEMP!!!!!!!!!!!!!!!!!!!!
+  
+  // VARIABLE DECLARATION
+  var lockpadIsOpen = 1;
+  // $("#hiddenLastObjID").val(STORE HERE); // 
+  // $("#hiddenLastObjID").val(); // retrieves
+
+  // lastObjID = -1; // (global) last statement to print
+  // newElement = 0; // global var to track new messages
+  // chatMessage = []; // global array
+  // var objIDLen = -10; // always the last 10 digits of the element
+  // var serverResponse;
+  // var lockpadOpen = document.getElementByID("#lockpadOpen");
+
+  // var lockpadLocked = document.getElementByID("#lockpadLocked");
+
+  	// Can I also do "   $(".lockpadOpen")
+
+
+////////////////////////////////////////////////////
+/////       $(document).ready(function(){      /////
+////////////////////////////////////////////////////
+
+$(document).ready(function () { // for DOM interaction
+
+
+$(".sliderButton").left = 50;
+
+$(".lockpadLocked").toggle(); // hide the open lock 
+$(".sliderButton").position="fixed";
+
+
+
+$(".lockpadBase").click( function() {
+	$(".lockpadOpen").toggle();
+	$(".lockpadLocked").toggle();
+
+	if (lockpadIsOpen == 1) lockpadIsOpen=0;
+	else lockpadIsOpen=1;
+}) // end sliderButton.click
+
+
+
+
+// $(".sliderButton").click( function() {
+// console.log("Mouse = " + event.x)
+// $(".sliderButton").style.height = event.x;
+// }); // end sliderButton.click()
+
+
+
+$(".sliderButton").mousedown( function() {
+if(lockpadIsOpen==1){
+	// $(".sliderButton").style.position="relative";
+
+  //$(document).mousemove(function(event){ 
+  $(".sliderButton").mousemove(function(event){ 
+//$(".sliderButton").style.left = event.pageX;
+    console.log("X: " + event.pageX + ", Y: " + event.pageY); 
+
+    $(".sliderButton").position(event.pageX);
+
+
+  }); // end mousemove
+
+} // end lockIsOpen
+}); // end sliderButton mousedown
+
+$(".sliderButton").mouseup( function() {
+$(".sliderButton").stop();
+}) // end sliderButton mousedown
+
+
+$(".sliderGuide").click( function() {
+	
+	console.log("guide clicked at " + event.x)
+});
+
+
+
+// $(".sliderGuide").mousedown( function() {
+
+// $(".sliderGuide").animate({})
+
+//   $(".sliderGuide").mousemove(function() { 
+// 	console.log("Mouse on guide at " + event.x)
+// 	}); // mousemove
+
+// });
+
+
+
+
+
+  //timer = setInterval(function () { lastObjID = fetchParsePrint(); }, 3000); // pull messages from server every 3 seconds
+  // timer = setInterval(function () { fetchParsePrint(); }, 3000); // pull messages from server every 3 seconds
+
+  // FETCH
+  // var fetchParsePrint = function ()
+  // {
+  //   serverResponse = $.get("https://api.parse.com/1/classes/chats?order=createdAt", function (retObject)
+  //   {
+  //     chatMessage = serverResponse.responseText; // extract string item from object
+  //     chatMessage = chatMessage.slice(13, -3); // parse the string, trim ends...
+  //     chatMessage = chatMessage.split("},{"); // ... make array
+  //     var chatMessageArrayLength = chatMessage.length; // for manually accessing the last element.
+  //     $(".messages").empty(); // empty the chat window
+      
+  //     $.each(chatMessage, function (index, value) // for each text string in the array...
+  //     {
+  //       // At this point, we want to print (chatMessage[0] to chatMessage[chatMessageArrayLength], using jQuery's iterator)
+  //       var messageEnd = chatMessage[index].search("\",\"");
+  //       $(".messages").append("<li>" + chatMessage[index].substring(8, messageEnd) + "</li>"); // append new message to list  !!!!!!!!!!!!!!!!!!
+  //       $("#hiddenLastObjID").val(lastObjID); // store value 'globally'.
+  //     }); // end function(index, value)and .each(message)
+  //   }); // end function(serverResponse) and get()
+  // }; // end fetchParsePrint()
+
+
+  // SEND
+  // $(".send").click(function () // click()
+  // {
+  //   inputBoxText = "You: "; // user ID
+  //   inputBoxText += $(".draft").val(); // content of message box
+
+  //       $.post("https://api.parse.com/1/classes/chats", JSON.stringify({text : inputBoxText})); // post to server! Cool!
+  //   $(".draft").val(""); // clear the text box
+  // }); // end click()
+
+}); // end jQuery
+
+////////////////////////////////////////////////////
+/////     end $(document).ready(function(){    /////
+////////////////////////////////////////////////////
+  
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>My First Heading</h1>
+
+<p>My first paragraph.</p>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<!-- Check to see if JavaScript Declaration is already here. If not: -->
+<!-- <script type="text/javascript"> -->
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- NECESSARY?!?!?!?!?!? TEST!!!!!!!!! -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+
+<!-- END header / declare info -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+
+
+<div class="sliderDiv" id="sliderID" width="700">
+
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="200" width="700" version="1.2" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+ <defs id="defs4">
+  <linearGradient id="linearGradient3209" y2="379.66" spreadMethod="reflect" gradientUnits="userSpaceOnUse" x2="541.05" gradientTransform="matrix(2.4606061,0,0,1.6181818,-943.25611,-451.25988)" y1="348.27" x1="535.77">
+   <stop id="stop4242" stop-color="#ea70a1" offset="0"/>
+   <stop id="stop4254" stop-color="#f7c6d9" offset="0.35604"/>
+   <stop id="stop4244" stop-color="#ea70a1" stop-opacity="0" offset="1"/>
+  </linearGradient>
+ </defs>
+
+<!--  <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata> -->
+
+
+
+
+
+<!-- sliderGuide -->
+ <path style="stroke-linejoin:miter;fill-opacity:0.62025314;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.45406306;fill:#ea70a1;" stroke-miterlimit="4" d="m300,100a4,10,0,0,1,-9,0,4,10,0,1,1,9,0z"/>
+
+ <g transform="matrix(0.95528618,0,0,1.0150387,45.908665,-66.459209)" fill="#ea70a1">
+  <path stroke-linejoin="miter" d="m500,200,0-10c0-20,20-20,20,0l5-0.007c0-30-30-30-30,0.2v10z" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.5232923" fill="#ea70a1"/>
+ </g>
+
+
+ <g transform="matrix(0.98228616,0,0,0.99382158,-94.416305,45.492376)">
+  <rect stroke-linejoin="miter" style="color:#000000;enable-background:accumulate;" rx="4" ry="4" height="30" width="40" stroke="#ea70a1" stroke-linecap="butt" stroke-dasharray="none" x="600" y="50" stroke-miterlimit="4" stroke-width="2" fill="#ea70a1"/>
+  <path opacity="0.95999995" style="color:#000000;enable-background:accumulate;" d="m600,60c-3,0-6,3-6,6,0,2,1,4,3,5l-3,10h10l-3-10c2-1,3-3,3-5,0-3-3-6-6-6z" fill-rule="nonzero" fill="#FFF"/>
+ </g>
+
+
+ <g transform="matrix(0.95529125,0,0,1.0150387,20.906228,-56.459209)" fill="#ea70a1">
+  <path stroke-linejoin="miter" d="m500,200,0-10c0-20,20-20,20,0l5-0.007c0-30-30-30-30,0.2v10z" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.52328825" fill="#ea70a1"/>
+ </g>
+
+
+ <g style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:1.83157945;fill:none;" stroke-miterlimit="4" transform="matrix(0.90555354,0,0,0.91329176,-3.77699,10.946113)">
+  <path style="stroke-width:1.83157945;" d="m200,100,200,0"/>
+  <path style="stroke-width:1.83157945;" d="m200,100,0,9"/>
+  <path style="stroke-width:1.83157945;" d="m400,100,0,9"/>
+ </g>
+
+
+ <path style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.64199972;fill:none;" stroke-miterlimit="4" d="m400,100a10,10,0,0,1,-30,0,10,10,0,1,1,30,0z"/>
+ <g transform="translate(63.95919,-20.78974)">
+  <path style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:3;fill:none;" d="m400,100,10,0"/>
+  <path style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:3;fill:none;" d="m400,100,0,10"/>
+ </g>
+
+
+ <path style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:2.64211345;fill:none;" stroke-miterlimit="4" d="m200,100a10,10,0,0,1,-30,0,10,10,0,1,1,30,0z"/>
+ <path d="m200,100,10,0" style="stroke-linejoin:miter;stroke:#ea70a1;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-width:3;fill:none;"/>
+
+<!-- sliderButton -->
+
+<!-- lockpadOpen -->
+
+<!-- lockpadLocked -->
+
+<!-- lockpadBase -->
+
+
+
+
+
+
+
+</svg>
+</div>
+<!-- end slider -->
+
+
+
+<div class="measuringObjectsDiv" id="measuringObjectsID" width="700">
+
+</div> <!-- end measuringObjects -->
+
+
+
+<div class="tipsDiv" id="tipsID" width="700">
+
+</div> <!-- end tips -->
+
+
+
+
+
+
+
+</body>
+</html>

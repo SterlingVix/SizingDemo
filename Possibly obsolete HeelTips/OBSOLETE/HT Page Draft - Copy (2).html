@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!--		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>         -->
+    <!--     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />     -->
+<!--    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>        -->
+
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  
+	</head>
+  
+  
+  
+
+<!-- TEMP !!!!!!!!!!!!! -->
+<!-- TEMP !!!!!!!!!!!!! -->
+<!-- TEMP !!!!!!!!!!!!! -->
+
+
+<!-- <script type="text/javascript"> -->
+
+
+<style>
+<!--   .draggable { width: 90px; height: 90px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+   h3 { clear: left; } -->
+    
+
+  .draggable { width: 90px; height: 90px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+  #draggable, #draggable2 { margin-bottom:20px; }
+  #draggable { cursor: n-resize; }
+  #draggable2 { cursor: e-resize; }
+  #containment-wrapper { width: 95%; height:150px; border:2px solid #ccc; padding: 10px; }
+  h3 { clear: left; }
+
+    
+    
+</style>
+
+
+<script>
+
+// TEMP!!!!!!!!!!!!!!!!!!!!
+// TEMP!!!!!!!!!!!!!!!!!!!!
+// TEMP!!!!!!!!!!!!!!!!!!!!
+  
+  // $("#hiddenLastObjID").val(STORE HERE); // 
+  // $("#hiddenLastObjID").val(); // retrieves
+
+  // lastObjID = -1; // (global) last statement to print
+  // newElement = 0; // global var to track new messages
+  // chatMessage = []; // global array
+  // var objIDLen = -10; // always the last 10 digits of the element
+  // var serverResponse;
+  // var lockpadOpen = document.getElementByID("#lockpadOpen");
+
+  // var lockpadLocked = document.getElementByID("#lockpadLocked");
+
+  	// Can I also do "   $(".lockpadOpen")
+
+  var lockpadIsOpen = 0;
+  var tempObject = 0;
+  var sliderYPosition = 10000;
+  var sliderXPosition = 10000;
+  var sliderLeftConstraint = 20;
+  var sliderRightConstraint = 600;
+
+////////////////////////////////////////////////////
+/////       $(document).ready(function(){      /////
+////////////////////////////////////////////////////
+
+  
+  
+  function getCoordinates(elemIn, returnLeft, returnRight, returnTop, returnBottom) {
+  var r = elemIn.getBoundingClientRect();
+  returnLeft = r.right;
+  returnRight = r.left;
+  returnTop = r.top;
+  returnBottom = r.bottom;
+  alert("Top/Left: "+r.top+" / "+r.left)
+  alert("Right/Bottom: "+r.right+" / "+r.bottom)
+}
+  
+  
+$(document).ready(function () { // for DOM interaction
+  
+//  x=$("p").position().left;
+  
+    //document.getElementById("sliderGuideLeft").x
+  
+  // VARIABLE DECLARATION
+  // sliderLeftConstraint=document.getElementById("sliderGuideLeft").x;
+$("#sliderGuideRight").x;
+
+function setInitialPositions() {
+  tempObject=$("sliderGuideLeft").position();
+  console.log("sliderGuideLeft.position().left = " + tempObject.left);
+  sliderLeftConstraint = tempObject.left.valueOf();
+};
+
+
+
+
+
+
+  
+$("#lockpadClosed").toggle(); // hide the open lock 
+  
+  $("#sliderButton").draggable({ axis: "x", containment:"sliderGuide", scroll:false,
+    drag: function() {
+      console.log("sliderPosition = " + event.x);
+    }
+  // counts[ 1 ]++;
+  // updateCounterStatus( $drag_counter, counts[ 1 ] );
+  }); // end drag function
+  
+    // $( "#draggable" ).draggable({
+      // start: function() {
+        // counts[ 0 ]++;
+        // updateCounterStatus( $start_counter, counts[ 0 ] );
+      // },
+        
+      // },
+      // stop: function() {
+        // counts[ 2 ]++;
+  // console.log("sliderPosition = " + sliderPosition);
+        // updateCounterStatus( $stop_counter, counts[ 2 ] );
+      // }
+      
+      
+  
+$("#lockpadBase").click(function() {
+	$("#lockpadOpen").toggle();
+	$("#lockpadClosed").toggle();
+
+	if (lockpadIsOpen == 1) lockpadIsOpen=0;
+	else  lockpadIsOpen=1;
+  
+  console.log("lockpadIsOpen now == " + lockpadIsOpen);
+}) // end sliderButton.click
+    
+
+$("#sliderGuide").click( function() {	console.log("guide clicked at " + event.x)  });
+$("#sliderButton").click( function() {	console.log("button clicked at " + event.x)  });
+$("#buttonPlus").click( function() {	console.log("btnMinus clicked at " + event.x)  });
+$("#buttonMinus").click( function() {  console.log("btnPlus clicked at " + event.x)  });
+
+
+
+
+
+
+  //timer = setInterval(function () { lastObjID = fetchParsePrint(); }, 3000); // pull messages from server every 3 seconds
+  // timer = setInterval(function () { fetchParsePrint(); }, 3000); // pull messages from server every 3 seconds
+
+  // FETCH
+  // var fetchParsePrint = function ()
+  // {
+  //   serverResponse = $.get("https://api.parse.com/1/classes/chats?order=createdAt", function (retObject)
+  //   {
+  //     chatMessage = serverResponse.responseText; // extract string item from object
+  //     chatMessage = chatMessage.slice(13, -3); // parse the string, trim ends...
+  //     chatMessage = chatMessage.split("},{"); // ... make array
+  //     var chatMessageArrayLength = chatMessage.length; // for manually accessing the last element.
+  //     $(".messages").empty(); // empty the chat window
+      
+  //     $.each(chatMessage, function (index, value) // for each text string in the array...
+  //     {
+  //       // At this point, we want to print (chatMessage[0] to chatMessage[chatMessageArrayLength], using jQuery's iterator)
+  //       var messageEnd = chatMessage[index].search("\",\"");
+  //       $(".messages").append("<li>" + chatMessage[index].substring(8, messageEnd) + "</li>"); // append new message to list  !!!!!!!!!!!!!!!!!!
+  //       $("#hiddenLastObjID").val(lastObjID); // store value 'globally'.
+  //     }); // end function(index, value)and .each(message)
+  //   }); // end function(serverResponse) and get()
+  // }; // end fetchParsePrint()
+
+
+  // SEND
+  // $(".send").click(function () // click()
+  // {
+  //   inputBoxText = "You: "; // user ID
+  //   inputBoxText += $(".draft").val(); // content of message box
+
+  //       $.post("https://api.parse.com/1/classes/chats", JSON.stringify({text : inputBoxText})); // post to server! Cool!
+  //   $(".draft").val(""); // clear the text box
+  // }); // end click()
+
+}); // end jQuery
+
+////////////////////////////////////////////////////
+/////     end $(document).ready(function(){    /////
+////////////////////////////////////////////////////
+  
+  </script>
+
+    
+    
+    
+<body style="cursor: auto";>
+
+<h2 align="center">Using Our Interactive Sizing Chart:</h2>
+<ol>
+<li>Drag the slider button <strong>left (-)</strong> and <strong>right (+)</strong> to resize the page objects.</li>
+<li>Measure the <strong>US quarter, credit card,</strong> or <strong>ruler lines</strong> to confirm the size.</li>
+<li>Press the <strong>lockpad</strong> to lock in your size.</li>
+<li>Compare your heel tips against the outline on the screen.</li>
+</ol>
+<p>Please note that this chart requires a modern browser, and is still an experiment.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<input id="testInput" align="center" type="button" onclick='getCoordinates(this, sliderLeftConstraint, sliderRightConstraint, sliderYPosition, sliderXPosition)'/>
+<!--    <input id="brTest" value="Show button.getBoundingClientRect()" onclick='showRect(this)'/>    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+<!-- Check to see if JavaScript Declaration is already here. If not: -->
+<!-- <script type="text/javascript"> -->
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!-- NECESSARY?!?!?!?!?!? TEST!!!!!!!!! -->
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+
+<!-- END header / declare info -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
+
+
+<div class="sliderDiv" id="sliderID" align="left" width="700" height="300">
+
+
+
+ 
+ <!-- buttonMinus -->
+<svg id="buttonMinusSVG" align="left" width="5%" height="60" style="position:relative;" >
+ <g id="buttonMinus" transform="translate(20, 20)" stroke="#ea70a1" fill="white" stroke-width="3">
+  <circle r="15" fill="white"/>
+  <path id="path3039" d="m-7.50,0,15,0"/>
+ </g>
+</svg>
+
+
+ 
+ <!-- sliderGuide -->
+<svg id="sliderGuideSVG" align="left" width="50%" height="60"  style="position:relative;">
+  <g id="sliderGuide" stroke-linejoin="miter" transform="translate(0, 0)" stroke="#ea70a1" stroke-width="1.5" fill="none">
+  <path id="sliderGuideHorizontal" d="m1.52,1.06,181.11,0"/>
+  <path id="sliderGuideLeft" d="m1.52,1.95,0,8.2196"/>
+  <path id="sliderGuideRight" d="m1.63,1.95,0,8.2196"/>
+ </g>
+</svg>
+
+
+
+ <!-- sliderButton -->
+<svg id="sliderButton" align="left" width="13" height="33" style="position:relative; top:-5; " >
+  <ellipse id="sliderButtonSVG" style="cursor: e-resize;" cx="6.5" cy="16.5" rx="5" ry="15" stroke="#ea70a1" stroke-width="1.5" fill-opacity="0.60" fill="#ea70a1" />
+</svg>
+
+
+
+
+ <!-- buttonPlus -->
+<svg id="buttonPlusSVG" align="left" width="5%" height="60" style="position:relative;" >
+ <g id="buttonPlus" transform="translate(20, 20)" stroke="#ea70a1" fill="white" stroke-width="3">
+  <circle r="15" fill="white"/>
+  <path id="path3033" d="m-7.50,0,15,0"/>
+  <path id="path3035" d="m0,-7.50,0,15"/>
+ </g>
+</svg>
+
+
+ <!-- lockpadBase -->
+<svg id="lockpadSVG" align="center" width="20%" height="60"  style="position:relative;">
+ <g id="lockpadBase">
+  <rect id="rect3013" stroke-linejoin="miter" stroke-dasharray="none" rx="4" ry="4" height="30" width="40" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" y="2" x="2" stroke-width="2" fill="#ea70a1"/>
+  <path id="path3015" opacity="1" style="color:#000000; position:relative;" d="m21,10 c0,2.1819,1.4203,3.9753,4.261,4.9691l-4.261,9.9382h14.203l-4.261-9.9382c2.8406-0.99382,4.261-2.7872,4.261-4.9691,0-10.003-14.203-9.9963-14.203,0z" fill-rule="nonzero" fill="#FFF"/>
+ </g>
+</svg>
+ 
+
+ 
+ 
+ <!-- lockpadOpen -->
+<svg id="lockpadOpenSVG" align="center" width="20%" height="60"  style="position:relative;">
+ <path id="lockpadOpen" stroke-linejoin="miter" d="m2.5,2.5,0-10 c0-20,25-20,25,0" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="5" fill="none"/>
+</svg>
+
+
+ 
+ <!-- lockpadClosed -->
+<svg id="lockpadClosedSVG" align="center" width="20%" height="60"  style="position:relative;">
+ <path id="lockpadClosed" position: relative; stroke-linejoin="miter" d="m2.5,0.5,0-10 c0-20-25-20-25,0" stroke="#ea70a1" stroke-linecap="butt" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="5" fill="none"/>
+</svg>
+
+</div>
+<!-- end slider -->
+
+
+
+<div class="measuringObjectsDiv" id="measuringObjectsID" width="700">
+
+</div> <!-- end measuringObjects -->
+
+
+
+<div class="tipsDiv" id="tipsID" width="700">
+
+</div> <!-- end tips -->
+
+
+
+
+
+
+
+</body>
+</html>
