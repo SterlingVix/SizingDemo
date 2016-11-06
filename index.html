@@ -2,21 +2,38 @@
 <html>
 
 <head>
-    <title>Appception Web App</title>
-    <script src="index.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Sizing Chart</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 
 <body>
-    <nav class="top-nav"></nav>
-    <main class="content-container">
-        <section class="left-column">
-            <img class="left-column-image" src="images/leftColumn.png"/>
-        </section>
-        <section class="middle-column">
-            <iframe class="app-container" src="SliderApp/production/index.html"></iframe>
-        </section>
-    </main>
+  <div id="app" class="flex-container">
+    <div id="calibration-view" class="view">
+      <h2>calibration-view</h2>
+      <div id="calibration-container" class="container">
+
+      </div>
+    </div>
+    <div id="style-view" class="view">
+      <h2>style-view</h2>
+      <div id="style-container" class="container">
+
+      </div>
+    </div>
+    <div id="size-view" class="view">
+      <h2>size-view</h2>
+      <div id="size-container" class="container">
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = function() {
+      
+    };
+  </script>
 </body>
 
 </html>

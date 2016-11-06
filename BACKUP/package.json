@@ -1,0 +1,21 @@
+{
+  "name": "sizing-demo",
+  "version": "1.0.0",
+  "description": "Page viewable at http://sterlingvix.github.io/SizingDemo/",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SterlingVix/SizingDemo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SterlingVix/SizingDemo/issues"
+  },
+  "homepage": "https://github.com/SterlingVix/SizingDemo#readme"
+}

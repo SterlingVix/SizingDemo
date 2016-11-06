@@ -1,0 +1,80 @@
+/**
+ * Apply a natural box layout model to all elements
+ * while allowing components to change.
+ **/
+
+html {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/**
+ * Flexbox settings to keep all flexbox content
+ * centered in the middle of the display area.
+ **/
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-justify-content: center;
+          justify-content: center;
+  align-items: center;
+}
+
+.flex-container * {
+  -webkit-flex: initial;
+  flex: initial;
+}
+
+*:before,
+*:after {
+  display: inherit;
+  display: inline-flex;
+  display: inline-block;
+  -webkit-flex-flow: inherit;
+  flex-flow: inherit;
+  -webkit-justify-content: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  -webkit-flex: initial;
+  flex: initial;
+}
+
+#app {
+  
+}
+
+.view {
+  padding: 2mm;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.container {
+  
+}
+
+
+#calibration-view {
+  
+}
+
+
+#style-view {
+  
+  
+}
+
+
+#size-view {
+  
+  
+}
